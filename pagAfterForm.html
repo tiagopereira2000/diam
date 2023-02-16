@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Festa Final de Ano</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+  header{
+    background-color: black;
+    text-align: center;
+    padding: 30px;
+    color: white;
+  }
+  body{
+    font-family: Arial, "Franklin Gothic Heavy", sans-serif;
+    background-color: coral;
+  }
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-bottom: 40px;
+  }
+  .container{display: flex; flex-direction: row; text-align: center; margin-bottom: 30px;}
+
+  .button1{
+    text-align: center;
+  }
+
+  section{
+    display: -webkit-flex;
+    display: flex;
+    margin: 20px;
+  }
+  nav{
+    -webkit-flex: 1;
+    flex: 1;
+    background: white;
+    padding: 20px;
+  }
+</style>
+
+</head>
+<body>
+<header>
+  <figure style="flex-direction: row; margin-left: 20px;flex: auto">
+  <a href="https://iscte-iul.pt">
+  <img src="1662853796027_Captura_de_ecra__2022_09_11__a_s_00_35_00.png"
+       alt="akakakakak"
+       style="width:400px;height:300px;align-content: center">
+  </a>
+  </figure>
+
+  <figure style="flex-direction: row; margin-left: 20px;flex: auto">
+    <h2>HABLITA-TE A GANHAR 2 BILHETES</h2><br>
+    <a href="https://portugal.rollingloud.com/?utm_source=google&utm_medium=cpc&utm_campaign=brand&utm_id=642-304-7960&gclid=CjwKCAiAlp2fBhBPEiwA2Q10DwXRSsw6fbVXaGWU7ZozN_jdGCRb2kGiskhyUxA8PVMJoLDLw5aYVBoCloEQAvD_BwE">
+      <img src="logo.png" style="background-color: black; ">
+    </a>
+  </figure>
+</header>
+
+<nav>
+  <button type="button" class="button1" name="atuacoesButton" onclick="window.location.href='atuacoes.html'">
+    Atuações
+  </button>
+  <button type="button" class="button1" name="infoButton" onclick="window.location.href='info.html'">
+    +Info
+  </button>
+</nav>
+
+
+
+<section>
+  <form id="myForm">
+    nome do grupo: <input type="text" style="text-align: center;margin-bottom: 20px" id="nomeGrupo"><br>
+    titulo: <input type="text" style="margin-bottom: 20px;text-align: center;" name="titulo"><br>
+    descrição: <input type="text" style="margin-bottom: 20px; text-align: center; padding: 30px" name="descricao"><br>
+    data da atuação: <input type="date" style="padding: 15px; margin-bottom: 20px"><br>
+  </form>
+
+  <section id="tableSec">
+    <h3>tabela do grupo:</h3><br>
+    <table id="table">
+      <tr>
+        <th>Nome</th>
+        <th>Numero</th>
+        <th>Contacto</th>
+      </tr>
+      <tr>
+        <th><input type="text" name="nome1"></th>
+        <th><input type="text" name="num1"></th>
+        <th><input type="text" name="contacto1"></th>
+      </tr>
+      <tr>
+        <th><input type="text" name="nome1"></th>
+        <th><input type="text" name="num1"></th>
+        <th><input type="text" name="contacto1"></th>
+      </tr>
+      <tr>
+        <th><input type="text" name="nome1"></th>
+        <th><input type="text" name="num1"></th>
+        <th><input type="text" name="contacto1"></th>
+      </tr>
+      <tr>
+        <th><input type="text" name="nome1"></th>
+        <th><input type="text" name="num1"></th>
+        <th><input type="text" name="contacto1"></th>
+      </tr>
+    </table>
+  </section>
+  <!--  Checkbox para escolha de género -->
+  <section>
+    <fieldset style="padding: 30px">
+      <legend>Escolha o género da atuação</legend>
+      <input type="radio" name="mp4" value="musica">atuação musical<br>
+      <input type="radio" name="mp4" value="stand-up">stand-up comedy<br>
+      <input type="radio" name="mp4" value="magica">magia<br>
+      <input type="radio" name="mp4" value="danca">dança<br>
+      <input type="radio" name="mp4" value="malbarismo">malabarismo<br>
+      <input type="radio" name="mp4" value="teatro">peça de teatro<br>
+      <input type="radio" name="mp4" value="filme">filme curta-metragem<br>
+    </fieldset>
+  </section>
+</section>
+
+
+<!--função adicionar form. para tabela-->
+<!--NAO FUNCIONAL!-->
+<!--<script>-->
+<!--  function addToTable(){-->
+<!--    var table = document.getElementById("tabelaAtuacoes");-->
+<!--    var row = table.insertRow(1);-->
+<!--    var cell1 = row.insertCell(0);-->
+<!--    var cell2 = row.insertCell(1);-->
+<!--    var cell3 = row.insertCell(2);-->
+<!--    cell1.innerHTML = "blabla";-->
+<!--    cell2.innerHTML = "blibli";-->
+<!--    cell3.innerHTML = "bloblo";-->
+<!--  }-->
+<!--</script>-->
+
+<button type="submit" name="submitCheckForm">
+  Submeter
+</button>
+
+<figure style="flex-direction: row; border-collapse: collapse; margin-left: auto">
+
+          <iframe width="560" height="315"
+                  src="https://www.youtube.com/embed/8hXT0Ydm9as"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+          </iframe>
+</figure>
+</body>
+</html>
