@@ -5,42 +5,8 @@
   <meta charset="UTF-8">
   <title>Festa Final de Ano</title>
   <link rel="stylesheet" href="css/main.css">
-  <style>
-  header{
-    background-color: black;
-    text-align: center;
-    padding: 30px;
-    color: white;
-  }
-  body{
-    font-family: Arial, "Franklin Gothic Heavy", sans-serif;
-    background-color: coral;
-  }
-  table {
-    border-collapse: collapse;
-    width: 50%;
-    margin-bottom: 40px;
-  }
-  .container{display: flex; flex-direction: row; text-align: center; margin-bottom: 30px;}
-
-  .button1{
-    text-align: center;
-  }
-
-  section{
-    display: -webkit-flex;
-    display: flex;
-    margin: 20px;
-  }
-  nav{
-    -webkit-flex: 1;
-    flex: 1;
-    background: white;
-    padding: 20px;
-  }
-</style>
-
 </head>
+
 <body>
 <header>
   <figure style="flex-direction: row; margin-left: 20px;flex: auto">
@@ -61,10 +27,13 @@
 
 <nav>
   <button type="button" class="button1" name="atuacoesButton" onclick="window.location.href='atuacoes.html'">
-    Atuações
+    <legend>Atuações</legend>
   </button>
   <button type="button" class="button1" name="infoButton" onclick="window.location.href='info.html'">
-    +Info
+    <legend>+Info</legend>
+  </button>
+  <button type="button" class="button1" name="formButton" onclick="window.location.href='index.html'">
+    <legend>Registo</legend>
   </button>
 </nav>
 
@@ -72,14 +41,15 @@
 
 <section>
   <form id="myForm">
-    nome do grupo: <input type="text" style="text-align: center;margin-bottom: 20px" id="nomeGrupo"><br>
-    titulo: <input type="text" style="margin-bottom: 20px;text-align: center;" name="titulo"><br>
-    descrição: <input type="text" style="margin-bottom: 20px; text-align: center; padding: 30px" name="descricao"><br>
-    data da atuação: <input type="date" style="padding: 15px; margin-bottom: 20px"><br>
+    <legend>Formulário de Inscrição</legend>
+    nome do grupo: <input type="text" style="text-align: center;margin-bottom: 20px" id="nomeGrupo">
+    titulo: <input type="text" style="margin-bottom: 20px;text-align: center;" name="titulo">
+    descrição: <input type="text" style="margin-bottom: 20px; text-align: center; padding: 30px" name="descricao">
+    data da atuação: <input type="date" style="padding: 15px; margin-bottom: 20px">
   </form>
 
   <section id="tableSec">
-    <h3>tabela do grupo:</h3><br>
+    <legend>tabela do grupo:</legend><br>
     <table id="table">
       <tr>
         <th>Nome</th>
@@ -109,18 +79,24 @@
     </table>
   </section>
   <!--  Checkbox para escolha de género -->
-  <section>
-    <fieldset style="padding: 30px">
-      <legend>Escolha o género da atuação</legend>
-      <input type="radio" name="mp4" value="musica">atuação musical<br>
-      <input type="radio" name="mp4" value="stand-up">stand-up comedy<br>
-      <input type="radio" name="mp4" value="magica">magia<br>
-      <input type="radio" name="mp4" value="danca">dança<br>
-      <input type="radio" name="mp4" value="malbarismo">malabarismo<br>
-      <input type="radio" name="mp4" value="teatro">peça de teatro<br>
-      <input type="radio" name="mp4" value="filme">filme curta-metragem<br>
-    </fieldset>
-  </section>
+  <form>
+    <legend>Escolha o género da atuação</legend>
+    <input list="genero">
+    <datalist id="genero">
+      <option type="radio" name="mp4" value="musica">atuação musical<br>
+      <option type="radio" name="mp4" value="stand-up">stand-up comedy<br>
+      <option type="radio" name="mp4" value="magica">magia<br>
+      <option type="radio" name="mp4" value="danca">dança<br>
+      <option type="radio" name="mp4" value="malbarismo">malabarismo<br>
+      <option type="radio" name="mp4" value="teatro">peça de teatro<br>
+      <option type="radio" name="mp4" value="filme">filme curta-metragem<br>
+    </datalist>
+  </form>
+  <datalist type="fieldset">
+  </datalist>
+  <button type="submit" class="button1" name="submitCheckForm">
+  Submeter
+  </button>
 </section>
 
 
@@ -139,12 +115,7 @@
 <!--  }-->
 <!--</script>-->
 
-<button type="submit" name="submitCheckForm">
-  Submeter
-</button>
-
-<figure style="flex-direction: row; border-collapse: collapse; margin-left: auto">
-
+<figure>
           <iframe width="560" height="315"
                   src="https://www.youtube.com/embed/8hXT0Ydm9as"
                   title="YouTube video player" frameborder="0"
@@ -152,5 +123,32 @@
                   allowfullscreen>
           </iframe>
 </figure>
+
+
+<footer>
+  <h2 class="centerText">Juri: </h2>
+  <h3 class="centerText">João Leitão, Ana Freitas, Rodrigo Pacheco</h3><br>
+  <h2 class="centerText">Contactos: +351 295 600 300</h2><br>
+  <table id="tabelaAtuacoes">
+    <legend>Atuações marcadas</legend>
+  <tr>
+    <th>Grupo</th>
+    <th>Tipo</th>
+    <th>Data/Hora</th>
+  </tr>
+  <tr>
+    <td>Os Caricas</td>
+    <td>atuação musical</td>
+    <td>14/2/2023</td>
+    </td>
+  </tr>
+  <tr>
+    <td>Hoodini</td>
+    <td>magia</td>
+    <td>14/2/2023</td>
+    </td>
+  </tr>
+</table>
+</footer>
 </body>
 </html>
