@@ -45,13 +45,15 @@ body{
     padding: 30px;
     color: white;
   }
+
   .centerText{
     text-align: center;
   }
 
   input{
-    flex-direction: row;
+    margin-bottom: 20px;
   }
+
   table {
     border-collapse: collapse;
     width: 100%;
@@ -61,6 +63,7 @@ body{
     align-content: center;
     flex: auto;
   }
+
   .container{display: flex; flex-direction: row; text-align: center; margin-bottom: 30px;}
 
   figure{
@@ -73,6 +76,10 @@ body{
 
 fieldset{
   padding: 30px;
+}
+
+label{
+  margin-bottom: 15px;
 }
 
 form{
@@ -89,11 +96,12 @@ form{
     font-family: "Agency FB";
     text-decoration: underline  ;
   }
+
   section{
-    display: flex;
     flex-direction: column;
     margin: 20px;
   }
+
   footer{
     background-color: black;
     border-bottom: red solid;
@@ -107,6 +115,17 @@ form{
     background: white;
     padding: 20px;
   }
+
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+}
+
+
 
 /*
  * Remove text-shadow in selection highlight:
