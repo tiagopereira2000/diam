@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mais Informações</title>
+  <meta charset="UTF-8">
+  <title>Incrição de Grupo</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  <h2>Juri: </h2>João Leitão, Ana Freitas, Rodrigo Pacheco<br>
-  <h2>Contactos: +351 295 600 300</h2><br>
-</body>
+<section>
+  <form class="form2" id="myForm">
+    <legend>Formulário de Inscrição</legend>
+    nome do grupo: <input type="text" style="text-align: center;margin-bottom: 20px" id="nomeGrupo">
+    titulo: <input type="text" style="margin-bottom: 20px;text-align: center;" name="titulo">
+    descrição: <input type="text" style="margin-bottom: 20px; text-align: center; padding: 30px" name="descricao">
+    data da atuação: <input type="date" style="padding: 15px; margin-bottom: 20px">
+
+    <legend>tabela do grupo:</legend><br>
+    <table id="table">
+      <tr>
+        <th>Nome</th>
+        <th>Numero</th>
+        <th>Contacto</th>
+      </tr>
+      <tr>
+        <th><input type="text" name="nome1"></th>
+        <th><input type="text" name="num1"></th>
+        <th><input type="text" name="contacto1"></th>
+      </tr>
+      <tr>
+        <th><input type="text" name="nome1"></th>
+        <th><input type="text" name="num1"></th>
+        <th><input type="text" name="contacto1"></th>
+      </tr>
+      <tr>
+        <th><input type="text" name="nome1"></th>
+        <th><input type="text" name="num1"></th>
+        <th><input type="text" name="contacto1"></th>
+      </tr>
+      <tr>
+        <th><input type="text" name="nome1"></th>
+        <th><input type="text" name="num1"></th>
+        <th><input type="text" name="contacto1"></th>
+      </tr>
+    </table>
+  <!--  Checkbox para escolha de género -->
+
+    <legend>Escolha o género da atuação</legend>
+    <input list="genero">
+    <datalist type="datalist" id="genero" style="background-color: #f5f5f5; font-size: 14px;">
+      <option type="radio" name="mp4" value="musica">atuação musical<br>
+      <option type="radio" name="mp4" value="stand-up">stand-up comedy<br>
+      <option type="radio" name="mp4" value="magica">magia<br>
+      <option type="radio" name="mp4" value="danca">dança<br>
+      <option type="radio" name="mp4" value="malbarismo">malabarismo<br>
+      <option type="radio" name="mp4" value="teatro">peça de teatro<br>
+      <option type="radio" name="mp4" value="filme">filme curta-metragem<br>
+    </datalist>
+
+    <button type="button" class="button2" onclick="enviarForm()">Submeter</button>
+  </form>
+  <script>
+  function enviarForm() {
+    // Envia o formulário
+    document.getElementById("myForm").submit();
+
+    // Navega para outra página
+    window.location.href = "pagAfterForm.html";
+  }
+  </script>
+</section>
 </html>

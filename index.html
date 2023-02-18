@@ -6,16 +6,9 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<nav>
-  <ul>
-    <li><a href='pagAfterForm.html'>Home</a></li>
-    <li><a href="#">Sobre</a></li>
-    <li><a href="#">Contato</a></li>
-  </ul>
-</nav>
 
 <section>
-  <form action="pagAfterForm.html" method="post">
+  <form class="form1" id="meuform" action="pagAfterForm.html" method="post">
     <h2>Formulário de Contato</h2>
     <br>
     <label for="date">Data de Nascimento:</label>
@@ -35,8 +28,17 @@
 <br>
 
 <!-- botao para continuar registo do grupo -->
-    <input type="submit" value="Enviar">
+    <button type="button" class="button2" onclick="enviarForm()">Registar</button>
   </form>
+  <script>
+  function enviarForm() {
+    // Envia o formulário
+    document.getElementById("meuform").submit();
+
+    // Navega para outra página
+    window.location.href = "pagAfterForm.html";
+  }
+  </script>
 </section>
 </body>
 </html>

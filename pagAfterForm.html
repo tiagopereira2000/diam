@@ -41,70 +41,52 @@
 </nav>
 
 
-<aside>
-  ashdasidasiu
-</aside>
+<article style="display: flex;">
+  <div style="flex: 70%;">
+    <!-- Conteúdo principal do artigo -->
+    <section style="border: 1px solid black;">
+      <table id="tabelaAtuacoes">
+        <legend>Atuações marcadas</legend>
+        <tr>
+          <th>Grupo</th>
+          <th>Tipo</th>
+          <th>Data/Hora</th>
+        </tr>
+        <tr>
+          <td>Os Caricas</td>
+          <td>atuação musical</td>
+          <td>14/2/2023 14:00</td>
+          </td>
+        </tr>
+        <tr>
+          <td>Hoodini</td>
+          <td>magia</td>
+          <td>14/2/2023 14:15</td>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section style="border: 1px solid black;">
+      <legend>Informações sobre tipos de peformance</legend>
+      <h3 style="margin-left: 30px;">Malabarismo e magia </h3>
+      <p style="margin-left: 30px;">Concorrente traz o seu equipamento para a sua performance</p>
 
-<section>
-  <form id="myForm">
-    <legend>Formulário de Inscrição</legend>
-    nome do grupo: <input type="text" style="text-align: center;margin-bottom: 20px" id="nomeGrupo">
-    titulo: <input type="text" style="margin-bottom: 20px;text-align: center;" name="titulo">
-    descrição: <input type="text" style="margin-bottom: 20px; text-align: center; padding: 30px" name="descricao">
-    data da atuação: <input type="date" style="padding: 15px; margin-bottom: 20px">
-  </form>
-
-  <section id="tableSec">
-    <legend>tabela do grupo:</legend><br>
-    <table id="table">
-      <tr>
-        <th>Nome</th>
-        <th>Numero</th>
-        <th>Contacto</th>
-      </tr>
-      <tr>
-        <th><input type="text" name="nome1"></th>
-        <th><input type="text" name="num1"></th>
-        <th><input type="text" name="contacto1"></th>
-      </tr>
-      <tr>
-        <th><input type="text" name="nome1"></th>
-        <th><input type="text" name="num1"></th>
-        <th><input type="text" name="contacto1"></th>
-      </tr>
-      <tr>
-        <th><input type="text" name="nome1"></th>
-        <th><input type="text" name="num1"></th>
-        <th><input type="text" name="contacto1"></th>
-      </tr>
-      <tr>
-        <th><input type="text" name="nome1"></th>
-        <th><input type="text" name="num1"></th>
-        <th><input type="text" name="contacto1"></th>
-      </tr>
-    </table>
-  </section>
-  <!--  Checkbox para escolha de género -->
-  <form>
-    <legend>Escolha o género da atuação</legend>
-    <input list="genero">
-    <datalist id="genero">
-      <option type="radio" name="mp4" value="musica">atuação musical<br>
-      <option type="radio" name="mp4" value="stand-up">stand-up comedy<br>
-      <option type="radio" name="mp4" value="magica">magia<br>
-      <option type="radio" name="mp4" value="danca">dança<br>
-      <option type="radio" name="mp4" value="malbarismo">malabarismo<br>
-      <option type="radio" name="mp4" value="teatro">peça de teatro<br>
-      <option type="radio" name="mp4" value="filme">filme curta-metragem<br>
-    </datalist>
-  </form>
+      <h3 style="margin-left: 30px;">Restantes</h3>
+      <p style="margin-left: 30px;">Equipamento necessário é fornecido</p>
 
 
 
-  <button type="submit" class="button1" name="submitCheckForm">
-  Submeter
-  </button>
-</section>
+    </section>
+  </div>
+  <aside style="flex: 30%; background-color: black; padding: 10px;">
+    <!-- Conteúdo do aside -->
+    <h3>Anúncio</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ligula tincidunt, commodo massa vitae, mollis tortor. Mauris feugiat metus vel dolor fermentum, sed tincidunt mi gravida.</p>
+  </aside>
+</article>
+
+
+
 
 
 
@@ -123,26 +105,7 @@
   <h2 class="centerText">Juri: </h2>
   <h3 class="centerText">João Leitão, Ana Freitas, Rodrigo Pacheco</h3><br>
   <h2 class="centerText">Contactos: +351 295 600 300</h2><br>
-  <table id="tabelaAtuacoes">
-    <legend>Atuações marcadas</legend>
-  <tr>
-    <th>Grupo</th>
-    <th>Tipo</th>
-    <th>Data/Hora</th>
-  </tr>
-  <tr>
-    <td>Os Caricas</td>
-    <td>atuação musical</td>
-    <td>14/2/2023</td>
-    </td>
-  </tr>
-  <tr>
-    <td>Hoodini</td>
-    <td>magia</td>
-    <td>14/2/2023</td>
-    </td>
-  </tr>
-</table>
+
 </footer>
 </body>
 </html>

@@ -19,6 +19,31 @@ html {
 }
 
 
+.button2 {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.button2:hover {
+  background-color: #3e8e41;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+input[list] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .button1{
     padding: inherit;
     text-align: center;
@@ -29,6 +54,12 @@ html {
     border-top: white solid;
     margin-top: auto;
     flex: auto;
+}
+
+.button1:hover {
+  background-color: orange;
+  color: white;
+  transition-duration: 0.4s;
 }
 
 body{
@@ -50,9 +81,6 @@ body{
     text-align: center;
   }
 
-  input{
-    margin-bottom: 20px;
-  }
 
   table {
     border-collapse: collapse;
@@ -78,8 +106,31 @@ fieldset{
   padding: 30px;
 }
 
-label{
-  margin-bottom: 15px;
+label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.form1 {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: orange;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.form2 {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: orange;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
 form{
@@ -189,8 +240,19 @@ fieldset {
  * Allow only vertical resizing of textareas.
  */
 
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="color"],
+input[type="tel"],
+input[type="date"],
 textarea {
-  resize: vertical;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #fff;
 }
 
 /* ==========================================================================
@@ -361,6 +423,7 @@ textarea {
   p,
   h2,
   h3 {
+    margin-left: 30px;
     orphans: 3;
     widows: 3;
   }
