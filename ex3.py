@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: iso-8859-15 -*-
 import string
+from timeit import default_timer as timer
 from collections import Counter
 
 poema = 'Eu hoje fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Eu acho que o meu samba é uma corrente / E coerentemente assino embaixo / Hoje é preciso refletir um pouco / E ver que o samba está tomando jeito / Só mesmo embriagado ou muito louco / Pra contestar e pra botar defeito / Precisa ser muito sincero e claro / Pra confessar que andei sambando errado / Talvez precise até tomar na cara / Pra ver que o samba está bem melhorado / Tem mais é que ser bem cara de tacho / Não ver a multidão sambar contente / Isso me deixa triste e cabisbaixo / Por isso eu fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Eu acho que o meu samba é uma corrente / E coerentemente assino embaixo / Hoje é preciso refletir um pouco / E ver que o samba está tomando jeito / Só mesmo embriagado ou muito louco / Pra contestar e pra botar defeito / Precisa ser muito sincero e claro / Pra confessar que andei sambando errado / Talvez precise até tomar na cara / Pra ver que o samba está bem melhorado / Tem mais é que ser bem cara de tacho / Não ver a multidão sambar contente / Isso me deixa triste e cabisbaixo'
@@ -144,22 +145,23 @@ print(f"Lista final:{lista}")
 print("\nEX -- 3.4")
 
 
-def ee_transposta(string1, string2):
+def is_tranposed(string1, string2):
+  compare = string2
   for c in string1:
-    string2 = string2.replace(c, '') # 2 steps
-    print(string2)
-  if string2 == "":
+    compare = compare.replace(c, '') # 2 steps
+  if compare == "":
+    print(f"retirando os caracteres presentes em {string1} de {string2} ficámos com uma string vazia")
     return True
-  return False
+  else:
+    print(f"retirando os caracteres presentes em {string1} de {string2} ficámos com {compare}, as palvras não são transpostas")
+    return False
   # O = 2n
 
-
-string1 = "roma"
-string2 = "amor"
-
-
-# print(string2)
-# print(ee_transposta(string1, string2))
+print("\n1)")
+start = timer()
+is_tranposed("chico", "cochi")
+end = timer()
+print("tempo de execução: ", end-start)
 
 def equal_strings(str1, str2):
   # O = 2n^2
@@ -168,32 +170,43 @@ def equal_strings(str1, str2):
   bubble_sort(lst1)
   bubble_sort(lst2)
   if lst1 == lst2 :
+    print(f"A lista ordenada gerada pelas strings {str1} e {str2} são iguais")
     return True
-  return False
+  else:
+    print(f"A lista ordenada gerada pelas strings {str1} e {str2} são diferentes")
+    return False
 
-# print(equal_strings(string1, string2)) #7 PASSOS- falta cronometrar o tempo
+print("\n2)")
+start = timer()
+equal_strings("ele", "lee") #7 PASSOS- falta cronometrar o tempo
+end = timer()
+print("tempo de execução: ", end-start)
 
-def transposed_combinations(word):
+def transposed_combinations(word1, word2):
   transposed = set()
-  transposed.add(word)
-
-  for i in range(len(word)):
-    for j in range(i + 1, len(word)):
-      transposed_word = list(word)
+  transposed.add(word1)
+  for i in range(len(word1)):
+    for j in range(i + 1, len(word1)):
+      transposed_word = list(word1)
       transposed_word[i], transposed_word[j] = transposed_word[j], transposed_word[i]
       transposed.add("".join(transposed_word))
-
       for t in list(transposed):
         transposed_t = list(t)
         transposed_t[i], transposed_t[j] = transposed_t[j], transposed_t[i]
         transposed.add("".join(transposed_t))
-
   transposed = sorted(list(transposed))
-  return transposed
+  if word2 in transposed:
+    print(f"a palavra {word2} está presente na lista {transposed}")
+    return True
+  else:
+    print(f"a palavra {word2} não se encontra na lista {transposed}")
+    return False
 
-word = "roma"
-transposed = transposed_combinations(word)
-print(transposed)
+print("\n3)")
+start=timer()
+transposed_combinations("roma", "amor")
+end = timer()
+print("tempo de execução: ", end-start)
 
 def count_chars(word1, word2):
   count1 = Counter(word1)
@@ -206,5 +219,12 @@ def count_chars(word1, word2):
   return True
   #contar char
 
-count_chars("roma", "amor")
 
+print("\n4)")
+start = timer()
+count_chars("aaabbbcccddd", "bbbdddaaaccc")
+end = timer()
+print("tempo de execução: ", end-start)
+
+
+print("\n5) O método com menor tempo de execução é o 1) seguido do 2) do 3) e por fim o 4)")
